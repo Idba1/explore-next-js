@@ -57,13 +57,18 @@ const page = () => {
 
     return (
         <div >
-            {blogs.map((blog)=><div className='border-2 p-2' key={blog.slug}>
+            {blogs.map((blog) => <div className='border-2 p-2' key={blog.slug}>
                 <h1>{blog.title}</h1>
                 <h5>{blog.description}</h5>
-                <button  className='bg-[#FFD700] text-white px-5 py-2 rounded-sm hover:text-red-500 hover:font-bold cursor-pointer'>
+                <button className='bg-[#FFD700] text-white px-5 py-2 rounded-sm hover:text-red-500 hover:font-bold cursor-pointer'>
                     <Link href={`/blog/${blog.slug}`}>Details</Link>
                 </button>
             </div>)}
+
+            <button className='bg-[#FFD700] text-white px-5 py-2 rounded-sm hover:text-red-500 hover:font-bold cursor-pointer'>
+                <Link href={`/blog/specialblog`}>SpecialBlog</Link>
+            </button>
+
         </div>
     );
 };
