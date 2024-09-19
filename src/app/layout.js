@@ -1,5 +1,7 @@
 import localFont from "next/font/local";
 import "./globals.css";
+import Navbar from "@/Components/Navbar/Navbar";
+import Footer from "@/Components/Footer/Footer";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -23,24 +25,15 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <nav className="flex justify-between bg-red-900 text-white p-5">
-          <h1>Explore Next Js</h1>
-          <ul className="flex gap-5 ">
-            <li>Home</li>
-            <li>Blog</li>
-            <li>Service</li>
-            <li>Contact</li>
-            <li>About</li>
-          </ul>
-        </nav>
+
+        <Navbar></Navbar>
+
         <div className="h-screen">
           {children}
         </div>
-        <footer className="footer footer-center bg-base-300 text-base-content p-4 w-full bg-red-900 text-center text-white">
-          <aside>
-            <p>Copyright © {new Date().getFullYear()} - All right reserved by ACME Industries Ltd</p>
-          </aside>
-        </footer>
+
+        <Footer></Footer>
+
       </body>
     </html >
   );
