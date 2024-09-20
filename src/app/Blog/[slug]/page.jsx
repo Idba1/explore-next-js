@@ -5,7 +5,7 @@ const page = ({ params }) => {
     const singleBlog=blogs.find((blog)=>blog.slug==params.slug);
     const{title,description}=singleBlog;
     return (
-        <div className='h-screen'>
+        <div className='h-auto'>
             <h1>{title}</h1>
             <h3>{description}</h3>
         </div>
