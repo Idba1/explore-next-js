@@ -27,6 +27,10 @@ const Navbar = () => {
             title: "Contact",
             path: '/contact'
         },
+        {
+            title: "Dashboard",
+            path: '/dashboard'
+        },
     ]
 
     const handlr = () => {
