@@ -1,7 +1,6 @@
 "use client"
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
-import React from 'react';
 
 const Navbar = () => {
     const pathName = usePathname();
@@ -33,6 +32,12 @@ const Navbar = () => {
     const handlr = () => {
         router.push('/login');
     }
+
+    if (pathName.includes('dashboard')) return (
+        <div>
+            <div className='bg-amber-200 text-black p-4'>Dashboard navbar</div>
+        </div>
+    )
     return (
         <div>
             <nav className="flex justify-between bg-red-900 text-white p-5">
