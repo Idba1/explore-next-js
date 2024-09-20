@@ -3,7 +3,7 @@ import React from 'react';
 
 const page = () => {
     return (
-        <div>
+        <div className='h-screen'>
             <h1>This is about</h1>
             <AboutPage></AboutPage>
         </div>
