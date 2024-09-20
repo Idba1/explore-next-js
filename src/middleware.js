@@ -2,9 +2,9 @@ import { NextResponse } from 'next/server'
  
 // This function can be marked `async` if using `await` inside
 export function middleware(request) {
-  return NextResponse.redirect(new URL('/service', request.url))
+  return NextResponse.rewrite(new URL('/blog/specialblog', request.url))
 }
  
 export const config = {
-  matcher: '/about',
+  matcher: '/blog',
 }
